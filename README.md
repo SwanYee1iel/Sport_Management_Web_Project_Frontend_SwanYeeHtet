@@ -94,12 +94,13 @@ Backend: Node.js with Next.js API Routes
 
 Database: MongoDB 
 
-Deployment: Vercel (Frontend & Backend), MongoDB Atlas 
+Deployment: MongoDB Atlas 
 
-## 7. Credentials
+
+Credentials
 - **Admin_email** : admin@sportconnect.com
 - **Admin_password** : adminpassword123
-- **Staff_email** : Staff
+- **Staff_email** : Staff@gmail.com
 - **Staff_password** : 12345678
 
  

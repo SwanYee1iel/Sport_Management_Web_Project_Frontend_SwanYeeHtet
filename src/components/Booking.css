@@ -1,0 +1,589 @@
+/* ==========================================================================
+   1. CSS VARIABLES & BASE LAYOUT
+   ========================================================================== */
+:root {
+  --neon-green: #00ff40;
+  --bg-dark: #0a0a0a;
+  --card-grey: #161616;
+  --text-muted: #888;
+  --border-subtle: #222;
+}
+
+.booking-page-wrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+.booking-overlay-glow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 255, 64, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2. HERO SECTION & TYPOGRAPHY
+   ========================================================================== */
+.booking-hero {
+  text-align: center;
+  padding: 80px 0 50px;
+}
+
+.booking-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.neon-text {
+  color: var(--neon-green);
+  text-shadow: 0 0 15px rgba(0, 255, 64, 0.4);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   3. CATEGORY PILL NAVIGATION
+   ========================================================================== */
+.pill-nav-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.pill-nav {
+  display: flex;
+  background: var(--card-grey);
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid var(--border-subtle);
+  gap: 10px;
+}
+
+.pill-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px 10px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pill-icon {
+  width: 36px;
+  height: 36px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill-icon img {
+  width: 20px;
+  filter: grayscale(1) invert(1);
+}
+
+.pill-item.active {
+  background: var(--neon-green);
+  color: black;
+}
+
+.pill-item.active .pill-icon {
+  background: rgba(0,0,0,0.1);
+}
+
+.pill-item.active img {
+  filter: grayscale(0) invert(0);
+}
+
+/* ==========================================================================
+   4. ARENA GRID & CARDS
+   ========================================================================== */
+.arena-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.arena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-left: 5px solid var(--neon-green);
+  padding-left: 20px;
+}
+
+.arena-header h2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.arena-count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.arena-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.arena-card {
+  background: var(--card-grey);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 30px;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+}
+
+.arena-card:hover {
+  border-color: var(--neon-green);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.arena-card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.arena-id {
+  font-weight: 900;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.arena-status {
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.available .status-indicator { background: var(--neon-green); box-shadow: 0 0 10px var(--neon-green); }
+.maintenance .status-indicator { background: #ff4444; }
+
+.arena-card-body p {
+  color: #aaa;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.arena-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.arena-price {
+  display: flex;
+  align-items: baseline;
+  color: white;
+}
+
+.amount { font-size: 1.8rem; font-weight: 900; }
+.per { color: var(--text-muted); margin-left: 4px; font-weight: 600; }
+
+.arena-btn {
+  background: var(--neon-green);
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arena-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.4);
+}
+
+.arena-btn:disabled {
+  background: #222;
+  color: #555;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   5. PROFESSIONAL GLASSMORPHISM MODAL
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.payment-modal {
+  background: rgba(26, 26, 26, 0.95);
+  width: 90%;
+  max-width: 480px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 48px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 64, 0.05);
+}
+
+.close-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.close-modal:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.payment-modal h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.summary-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.summary-box p {
+  margin: 12px 0;
+  color: #888;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-box strong { color: #fff; font-weight: 600; }
+
+.label {
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ==========================================================================
+   6. DATE, TIME & PAYMENT SELECTORS
+   ========================================================================== */
+.datetime-selection {
+  text-align: left;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.input-group { margin-bottom: 20px; }
+.input-group:last-child { margin-bottom: 0; }
+
+.dark-date-input {
+  width: 100%;
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  padding: 14px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  color-scheme: dark;
+  outline: none;
+  transition: 0.3s;
+}
+
+.dark-date-input:focus {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 10px rgba(0, 255, 64, 0.2);
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.time-slot {
+  background: #111;
+  border: 1px solid #333;
+  color: #888;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-slot:hover { border-color: #555; color: white; }
+.time-slot.active { background: rgba(0, 255, 64, 0.1); border-color: var(--neon-green); color: var(--neon-green); }
+
+/* --- Pro UX Disabled Time Slot --- */
+.time-slot:disabled,
+.disabled-slot {
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  color: #444;
+  cursor: not-allowed !important; 
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.time-slot:disabled:hover,
+.disabled-slot:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  transform: none;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.method {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #2a2a2a;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.method:hover { border-color: #444; color: #fff; }
+.method.active { border-color: var(--neon-green); color: var(--neon-green); background: rgba(0, 255, 64, 0.05); box-shadow: 0 0 15px rgba(0, 255, 64, 0.1); }
+
+/* ==========================================================================
+   7. BUTTONS, ANIMATIONS & LOADERS
+   ========================================================================== */
+.pay-now-btn, .done-btn {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--neon-green);
+  color: #000;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px rgba(0, 255, 64, 0.2);
+}
+
+.pay-now-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(30deg);
+  transition: none;
+  animation: shimmer 3s infinite;
+}
+
+.pay-now-btn:hover, .done-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 255, 64, 0.4);
+  filter: brightness(1.1);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--neon-green);
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.5);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #333;
+  border-top-color: var(--neon-green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+.modern-loader {
+  height: 100vh;
+  background: var(--bg-dark);
+}
+
+.payment-step.processing p {
+  color: var(--neon-green);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { 0% { left: -60%; } 20% { left: 120%; } 100% { left: 120%; } }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+/* ==========================================================================
+   8. PROMPTPAY & UPLOAD UI
+   ========================================================================== */
+.promptpay-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-box {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.timer-box p {
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.countdown-text {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.qr-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.qr-amount {
+  color: #000;
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.upload-section {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.file-input {
+  width: 100%;
+  background: #111;
+  color: #aaa;
+  border: 1px dashed #444;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.file-input:hover {
+  border-color: var(--neon-green);
+  color: white;
+}

@@ -1,0 +1,137 @@
+.staff-dashboard-wrapper {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  padding: 60px 5%;
+  color: white;
+}
+
+.staff-header {
+  margin-bottom: 40px;
+  border-left: 4px solid var(--neon-green);
+  padding-left: 20px;
+}
+
+.staff-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.staff-header p { color: #888; font-size: 1.1rem; }
+
+.pending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.empty-queue {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  background: #111;
+  border: 1px dashed #333;
+  border-radius: 20px;
+  color: #888;
+}
+
+.staff-card {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.sport-badge {
+  background: rgba(0, 255, 64, 0.1);
+  color: var(--neon-green);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.court-id { font-weight: 900; color: #fff; }
+
+.card-body { flex-grow: 1; margin-bottom: 25px; }
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.info-label { color: #888; }
+.info-value { color: #fff; font-weight: 600; text-align: right; }
+
+.amount-row {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #333;
+}
+
+.highlight-amount { color: var(--neon-green); font-size: 1.2rem; font-weight: 900; }
+
+.card-actions { display: flex; flex-direction: column; gap: 12px; }
+
+.view-slip-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.view-slip-btn:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+.decision-buttons { display: flex; gap: 10px; }
+
+.approve-btn, .reject-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.approve-btn { background: var(--neon-green); color: #000; }
+.approve-btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+.reject-btn { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+.reject-btn:hover { background: #ef4444; color: #fff; }
+
+/* Slip Viewer Modal */
+.slip-modal {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.slip-modal h3 { color: white; margin-bottom: 20px; }
+
+.slip-image-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #000;
+}
+
+.slip-img { width: 100%; height: auto; display: block; }

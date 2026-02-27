@@ -1,0 +1,96 @@
+.management-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Form on left, Table on right */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Form Styling */
+.staff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.staff-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.staff-form label {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.staff-form input {
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+}
+
+.add-staff-btn {
+  background: #39FF14;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.add-staff-btn:hover {
+  background: #2ecc11;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+/* Table Styling */
+.table-wrapper {
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.staff-table th {
+  text-align: left;
+  padding: 15px;
+  background: #0a0a0a;
+  color: #888;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #222;
+}
+
+.staff-table td {
+  padding: 15px;
+  border-bottom: 1px solid #1a1a1a;
+  color: #ccc;
+}
+
+.staff-name-cell {
+  color: white !important;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 6px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #ff4d4d;
+  color: white;
+}

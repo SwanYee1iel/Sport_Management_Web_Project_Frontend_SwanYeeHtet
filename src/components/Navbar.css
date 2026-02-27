@@ -1,0 +1,308 @@
+/* Container & Layout */
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5%;
+  background-color: #121212;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Brand Logo */
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.brand-logo span {
+  color: #00ff40;
+}
+
+/* Center Navigation Links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+/* Active Page Highlight (Matches your sketch) */
+.nav-menu a.active {
+  color: #00ff40;
+  border: 1px solid #00ff40;
+  border-radius: 20px;
+}
+
+.nav-menu a:hover:not(.active) {
+  color: #00ff40;
+}
+
+/* Right Side Actions Area */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Auth Buttons (Guest State) */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-login {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  align-self: center;
+}
+
+.nav-signup {
+  background-color: #00ff40;
+  color: #121212;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+/* Logged In State */
+.user-logged-in {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-text {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Profile Icon */
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: #1e1e1e;
+  color: #9ca3af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s;
+  text-decoration: none;
+}
+
+.profile-circle:hover {
+  border-color: #00ff40;
+  color: #00ff40;
+}
+
+.profile-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Logout Styling */
+.logout-btn {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+/* Profile Account Area */
+.profile-account-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-profile-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 30px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.profile-trigger:hover {
+  border-color: #00ff40;
+  background: rgba(0, 255, 64, 0.05);
+}
+
+.avatar-img, .avatar-placeholder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #444;
+}
+
+.avatar-placeholder {
+  background: var(--neon-green);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.chevron-icon {
+  color: #666;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+/* Dropdown Menu (Hidden by default) */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 180px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 8px;
+  display: none; /* Switch to flex on hover */
+  flex-direction: column;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  z-index: 2000;
+  backdrop-filter: blur(10px);
+}
+
+.user-profile-dropdown:hover .dropdown-menu {
+  display: flex;
+  animation: slideDown 0.2s ease-out;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.2s;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #333;
+  margin: 6px 0;
+}
+
+.logout-special {
+  color: #ef4444 !important;
+}
+
+.logout-special:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Staff Tab Styling */
+.staff-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 255, 64, 0.05);
+  border: 1px solid rgba(0, 255, 64, 0.2) !important;
+  border-radius: 20px;
+  color: var(--neon-green) !important;
+}
+
+.staff-tab:hover, .staff-tab.active {
+  background: rgba(0, 255, 64, 0.15);
+  border-color: var(--neon-green) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 64, 0.2);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--neon-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.avatar-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover; /* This prevents the image from stretching */
+  border: 2px solid var(--neon-green);
+  display: block; /* Ensures it isn't hidden by default */
+}
+
+.avatar-placeholder {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}

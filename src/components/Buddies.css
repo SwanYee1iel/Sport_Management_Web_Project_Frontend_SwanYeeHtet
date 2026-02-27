@@ -1,0 +1,233 @@
+/* --- PAGE WRAPPER & HEADER --- */
+.buddies-page-wrapper {
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: #050505;
+  color: white;
+}
+
+.buddies-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reveal-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.neon-text {
+  color: #39FF14;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+.hero-subtitle {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* --- GRID LAYOUT --- */
+.buddies-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buddies-grid {
+  display: grid;
+  /* Automatically adjusts the number of columns based on screen size */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* --- BUDDY CARD --- */
+.buddy-card {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.buddy-card:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(57, 255, 20, 0.05);
+}
+
+/* --- AVATAR WITH GRADIENT RING --- */
+.buddy-avatar-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  padding: 3px; /* Creates the thickness of the ring */
+  background: linear-gradient(135deg, #39FF14, #00d1ff); /* Neon Green to Blue gradient */
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+/* --- PAGE WRAPPER & HEADER --- */
+.buddies-page-wrapper {
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: #050505;
+  color: white;
+}
+
+.buddies-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reveal-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.neon-text {
+  color: #39FF14;
+  text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+.hero-subtitle {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* --- GRID LAYOUT --- */
+.buddies-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buddies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* --- BUDDY CARD --- */
+.buddy-card {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Prevents anything from breaking out of the card */
+}
+
+.buddy-card:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(57, 255, 20, 0.05);
+}
+
+/* --- AVATAR WITH GRADIENT RING (FIXED) --- */
+.buddy-avatar-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  padding: 4px; /* Thickness of the neon ring */
+  background: linear-gradient(135deg, #39FF14, #00d1ff);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevents the circle from squishing */
+}
+
+.buddy-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* CRITICAL: This perfectly crops rectangular images into the circle */
+  background-color: #1a1a1a;
+  border: 3px solid #111; /* Creates the dark gap between the image and the neon ring */
+}
+
+.buddy-avatar.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* --- CARD TEXT & TAGS (FIXED) --- */
+.buddy-name {
+  margin: 10px 0 5px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.buddy-interests {
+  display: flex;
+  flex-wrap: wrap; /* Allows tags to wrap to the next line */
+  justify-content: center;
+  gap: 8px; /* CRITICAL: Adds space between the sports so they don't mash together */
+  margin: 15px 0 25px;
+  width: 100%;
+}
+
+.interest-tag {
+  background-color: rgba(57, 255, 20, 0.1);
+  color: #39FF14;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* Prevents individual words from breaking in half */
+}
+
+/* --- CONNECT BUTTON --- */
+.connect-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #39FF14;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Always pushes the button to the very bottom */
+}
+
+.connect-btn:hover {
+  background-color: #39FF14;
+  color: #000;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
+/* --- EMPTY STATE --- */
+.no-buddies-state {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #111;
+  border: 1px dashed #333;
+  border-radius: 16px;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.no-buddies-state h2 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}

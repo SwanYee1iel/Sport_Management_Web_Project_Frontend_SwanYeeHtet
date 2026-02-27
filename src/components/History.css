@@ -1,0 +1,160 @@
+.history-page {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  padding: 60px 5%;
+  color: white;
+}
+
+.history-container { max-width: 900px; margin: 0 auto; }
+
+.history-card {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.history-card:hover { border-color: #00ff40; transform: scale(1.02); }
+
+.history-icon-box {
+  width: 60px; height: 60px;
+  background: #222;
+  border-radius: 15px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.history-icon-box img { width: 35px; filter: invert(1); }
+
+.history-info h3 { margin: 0 0 5px 0; font-size: 1.2rem; }
+
+.history-date { color: #888; margin: 0; font-size: 0.9rem; }
+
+.history-status-area { margin-left: auto; text-align: right; }
+
+.status-tag {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status-tag.confirmed { background: rgba(0, 255, 64, 0.1); color: #00ff40; }
+
+.history-price { color: #555; font-size: 0.8rem; margin-top: 8px; }
+
+
+.history-wrapper {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  color: white;
+  padding: 80px 5%;
+}
+
+.history-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.history-header {
+  margin-bottom: 50px;
+  border-left: 4px solid #00ff40;
+  padding-left: 20px;
+}
+
+.neon-text {
+  color: #00ff40;
+  text-shadow: 0 0 10px rgba(0, 255, 64, 0.3);
+}
+
+.history-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Ticket Design */
+.history-ticket {
+  background: #161616;
+  border: 1px solid #222;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.history-ticket:hover {
+  border-color: #00ff40;
+  transform: translateX(10px);
+}
+
+.ticket-left {
+  flex: 1;
+  padding: 30px;
+  border-right: 2px dashed #333;
+}
+
+.sport-tag {
+  color: #00ff40;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.ticket-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.description-text {
+  color: #888;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ticket-right {
+  width: 250px;
+  padding: 30px;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.booking-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.date-label { font-weight: 700; font-size: 1.1rem; }
+.time-label { color: #888; font-size: 0.9rem; }
+
+.status-badge {
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status-badge.confirmed { background: rgba(0, 255, 64, 0.1); color: #00ff40; }
+.status-badge.pending { background: rgba(255, 191, 0, 0.1); color: #ffbf00; }
+
+.history-loader {
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

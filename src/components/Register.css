@@ -1,0 +1,199 @@
+/* General Page Layout */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fb; /* Light grey background */
+  font-family: sans-serif;
+}
+
+/* Main Container for the form */
+.register-container {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Neon Green Header Section */
+.register-header {
+  background-color: #00ff40; /* Your requested theme color */
+  color: #111827; /* Dark text for readability against the bright green */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.register-header h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.register-header p {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  color: #374151; 
+}
+
+/* Form Card Section */
+.register-card {
+  padding: 2rem;
+}
+
+/* Profile Picture Upload Styling */
+.profile-upload-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-upload-label {
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #d1d5db; 
+  color: white;
+  transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+.profile-upload-label:hover .profile-image {
+  opacity: 0.9;
+  box-shadow: 0 0 15px rgba(0, 255, 64, 0.5); /* Green glow effect on hover */
+}
+
+.profile-image.preview {
+  object-fit: cover;
+}
+
+.profile-image.placeholder svg {
+  width: 60%;
+  height: 60%;
+  fill: #9ca3af;
+}
+
+/* Form Group Styling (Labels and Inputs) */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151; 
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db; 
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: #111827;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Green focus state for inputs */
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00ff40; 
+  box-shadow: 0 0 0 3px rgba(0, 255, 64, 0.2);
+}
+
+/* Create Account Button */
+.create-account-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #00ff40; /* Your theme color */
+  color: #111827; /* Dark text for contrast */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  margin-top: 10px;
+}
+
+/* Slightly darker green for hover state */
+.create-account-btn:hover {
+  background-color: #00cc33; 
+  transform: translateY(-1px);
+}
+
+/* Footer Links and Checkbox */
+.form-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  margin-right: 0.5rem;
+  accent-color: #00ff40; /* Makes the checkbox green when clicked */
+}
+
+.form-footer a {
+  color: #00cc33; /* Darker green for links to ensure readability on white */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+/* Interests Checkbox Grid Styling */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
+  gap: 12px;
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #f9fafb; /* Very light background to separate it from the form */
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.interest-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Override the default input styling for these specific checkboxes */
+.interest-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  margin-right: 8px;
+  accent-color: #00ff40; /* Makes the checkbox neon green when clicked */
+  cursor: pointer;
+}

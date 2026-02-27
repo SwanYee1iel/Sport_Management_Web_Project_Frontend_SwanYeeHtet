@@ -1,0 +1,159 @@
+/* Landing Page Container */
+.landing-page {
+  min-height: 100vh;
+  background-color: #121212; /* Dark theme */
+  color: #ffffff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: rgba(18, 18, 18, 0.9);
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #00ff40; /* Neon green accent */
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-login {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.nav-login:hover {
+  color: #00ff40;
+}
+
+.nav-signup {
+  background-color: #00ff40;
+  color: #121212;
+  padding: 8px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-signup:hover {
+  background-color: #00cc33;
+}
+
+/* Hero Section */
+.hero-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 5%;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #00ff40;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00ff40;
+  color: #121212;
+}
+
+.btn-primary:hover {
+  background-color: #00cc33;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #333;
+}
+
+.btn-secondary:hover {
+  border-color: #00ff40;
+  color: #00ff40;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.feature-card {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: left;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff40;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  color: #9ca3af;
+  margin-bottom: 0;
+  line-height: 1.5;
+}

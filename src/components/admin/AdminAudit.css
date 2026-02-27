@@ -1,0 +1,62 @@
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.staff-table th {
+  text-align: left;
+  padding: 15px;
+  background: #0a0a0a;
+  color: #888;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #222;
+}
+
+.staff-table td {
+  padding: 15px;
+  border-bottom: 1px solid #1a1a1a;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.staff-name-cell {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* --- Status Pills Styling --- */
+.status-pill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+/* Red for Open Issues */
+.status-pill.open {
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+}
+
+/* Green for Resolved/Closed */
+.status-pill.resolved, 
+.status-pill.closed {
+  background: rgba(57, 255, 20, 0.15);
+  color: #39FF14;
+  border: 1px solid #39FF14;
+}
+
+/* Yellow/Orange for In Progress */
+.status-pill.in-progress {
+  background: rgba(255, 170, 0, 0.15);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}

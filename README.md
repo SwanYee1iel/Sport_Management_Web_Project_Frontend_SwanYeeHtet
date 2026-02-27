@@ -96,4 +96,10 @@ Database: MongoDB
 
 Deployment: Vercel (Frontend & Backend), MongoDB Atlas 
 
+## 7. Credentials
+- **Admin_email** : admin@sportconnect.com
+- **Admin_password** : adminpassword123
+- **Staff_email** : Staff
+- **Staff_password** : 12345678
+
  

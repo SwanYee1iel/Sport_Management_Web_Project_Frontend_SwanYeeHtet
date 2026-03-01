@@ -102,5 +102,5 @@ Credentials
 - **Admin_password** : adminpassword123
 - **Staff_email** : Staff@gmail.com
 - **Staff_password** : 12345678
-
- 
+- **User_name** : "saw3@gmail.com"
+  -**User_password** : "123456"
